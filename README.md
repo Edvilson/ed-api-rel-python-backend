@@ -16,9 +16,6 @@ api_relatorios/
 │   └── relatorio_controller.py
 ├── routes/                 # Rotas e documentação Swagger
 │   └── relatorio_routes.py
-├── services/               # Serviços auxiliares
-├── utils/                  # Utilitários (formatação, validações, etc.)
-├── static/                 # Swagger UI estática (Flasgger)
 ├── requirements.txt        # Dependências Python
 └── .env.example            # Exemplo de configuração
 ```
@@ -26,7 +23,7 @@ api_relatorios/
 ## Instalação
 
 ```bash
-git clone <repo>
+git clone https://github.com/Edvilson/ed-api-rel-python-backend.git
 cd api_relatorios
 python -m venv venv
 source venv/bin/activate  # ou venv\Scripts\activate no Windows
