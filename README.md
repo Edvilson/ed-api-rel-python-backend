@@ -1,23 +1,8 @@
-# API de Relatórios - Flask + Swagger
+# API Relatórios
 
-Este projeto é uma API RESTful desenvolvida com **Flask**, voltada para consulta de relatórios técnicos em um banco de dados relacional.
+API RESTful para cadastro e listagem de relatórios utilizando Flask + SQLite.
 
-Ideal para sistemas corporativos que precisam expor dados com documentação clara e arquitetura profissional.
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-- **Flask**: microframework para construção da API
-- **Flasgger**: geração automática de documentação Swagger
-- **SQLAlchemy**: ORM para manipulação de dados
-- **SQLite** (pode ser facilmente adaptado para PostgreSQL ou Oracle)
-- **Blueprints**: organização modular das rotas
-- **dotenv**: gerenciamento de variáveis de ambiente
-
----
-
-## 📁 Estrutura do Projeto
+## Estrutura
 
 ```
 api_relatorios/
@@ -38,84 +23,25 @@ api_relatorios/
 └── .env.example            # Exemplo de configuração
 ```
 
----
-
-## 🔧 Instalação e Execução
+## Instalação
 
 ```bash
-# Clone o repositório
-git clone https://github.com/usuario/api-relatorios.git
-cd api-relatorios
-
-# Crie e ative um ambiente virtual
+git clone <repo>
+cd api_relatorios
 python -m venv venv
-source venv/bin/activate  # Windows: .\venv\Scripts\activate
-
-# Instale as dependências
+source venv/bin/activate  # ou venv\Scripts\activate no Windows
 pip install -r requirements.txt
-
-# Configure variáveis de ambiente
 cp .env.example .env
-# edite o arquivo .env conforme necessário (ex: caminho do banco SQLite)
+```
 
-# Rode a aplicação
+## Execução
+
+```bash
 python app.py
 ```
 
----
-
-## 📘 Documentação Swagger
-
-Após subir o servidor localmente:
-
-📄 Acesse a documentação interativa em:
-
-```
-http://localhost:5000/apidocs/
-```
-
----
-
-## ✅ Funcionalidades
-
-- Consulta de registros com filtros
-- Estrutura pronta para expandir CRUD
-- Documentação automática de todos os endpoints
-- Padrão de respostas JSON estruturado
-- Logs de requisições
-- Suporte a múltiplos ambientes (dev, test, prod)
-
----
-
-## 📌 Exemplo de Endpoint
-
-`GET /api/relatorios?equipamento=TT01`
-
-```json
-[
-  {
-    "id": 1,
-    "equipamento": "TT01",
-    "data": "2025-07-25",
-    "usuario": "jose",
-    "status": "Finalizado"
-  }
-]
-```
-
----
-
-## 🧪 Testes
-
-Você pode usar ferramentas como **Postman** ou **Swagger UI** incluído no projeto para testar todos os endpoints com segurança.
-
----
-
-## 📄 Licença
-
-Este projeto é open-source e pode ser utilizado como base para APIs corporativas, POCs ou integrações reais.
-
----
+Acesse a documentação Swagger em: [http://localhost:5000/apidocs](http://localhost:5000/apidocs)
 
 Desenvolvido por **Edvilson A. Kwiatkowski**  
-[LinkedIn](https://linkedin.com) | [Portfólio](https://portfolio-edvilson.vercel.app)
+[LinkedIn](https://www.linkedin.com/in/edvilson-kwiatkowski/) | [Portfólio](https://portfolio-edvilson.vercel.app)
+
