@@ -2,19 +2,22 @@ from flask import Flask
 from flasgger import Swagger
 from dotenv import load_dotenv
 import os
-from config.settings import Config
+from flask_sqlalchemy import SQLAlchemy
 from routes.relatorio_routes import relatorio_bp
-from models.relatorio import db
 
 load_dotenv()
 
 app = Flask(__name__)
-app.config.from_object(Config)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///relatorios.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-db.init_app(app)
+db = SQLAlchemy(app)
+
 Swagger(app)
-
 app.register_blueprint(relatorio_bp)
+
+with app.app_context():
+    db.create_all()
 
 if __name__ == '__main__':
     app.run(debug=True)

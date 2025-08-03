@@ -8,8 +8,6 @@ API RESTful para cadastro e listagem de relatórios utilizando Flask + SQLite.
 api_relatorios/
 │
 ├── app.py                  # Ponto de entrada da aplicação
-├── config/                 # Configurações de ambiente
-│   └── settings.py
 ├── models/                 # Modelos SQLAlchemy
 │   └── relatorio.py
 ├── controllers/            # Lógica de negócio
